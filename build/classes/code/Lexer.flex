@@ -1,5 +1,5 @@
 package code;
-import static codigo.Tokens.*;
+import static code.Tokens.*;
 %%
 %class Lexer
 %type Tokens
