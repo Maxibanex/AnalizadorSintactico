@@ -104,5 +104,8 @@ espacio=[ ,\t,\r]+
 /* Numero */
 ("(-"{D}+")")|{D}+ {lexeme=yytext(); return Numero;}
 
+/* Numero Decimal */
+("-"?{D}+"."{D}+)|("-"?{D}+) { lexeme=yytext(); return NumeroDecimal; }
+
 /* Error de analisis */
  . {return ERROR;}

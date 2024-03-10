@@ -5,6 +5,7 @@
  */
 package code;
 
+import static code.Tokens.Numero;
 import java.awt.Color;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -130,6 +131,9 @@ public class frmPantalla extends javax.swing.JFrame {
                     break;
                 case Numero:
                     resultado += "  Numero\t\t" + lexer.lexeme + "\n";
+                    break;
+                case NumeroDecimal:
+                    resultado += "  NumeroDecimal\t" + lexer.lexeme + "\n";
                     break;
                 case ERROR:
                     resultado += "  Simbolo no definido\n";

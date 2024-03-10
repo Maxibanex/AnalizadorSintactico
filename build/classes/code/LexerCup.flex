@@ -113,5 +113,9 @@ espacio=[ ,\t,\r,\n]+
 /* Numero */
 ("(-"{D}+")")|{D}+ {return new Symbol(sym.Numero, yychar, yyline, yytext());}
 
+/* Numero Decimal */
+("-"?{D}+"."{D}+)|("-"?{D}+) {return new Symbol(sym.NumeroDecimal, yychar, yyline, yytext());}
+
+
 /* Error de analisis */
  . {return new Symbol(sym.ERROR, yychar, yyline, yytext());}
